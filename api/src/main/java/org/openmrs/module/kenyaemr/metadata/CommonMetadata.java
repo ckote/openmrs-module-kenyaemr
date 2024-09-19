@@ -63,6 +63,7 @@ public class CommonMetadata extends AbstractMetadataBundle {
 		public static final String VMMC_PROCEDURE = "35c6fcc2-960b-11ec-b909-0242ac120002" ;
 		public static final String GAD_7 = "899d64ad-be13-4071-a879-2153847206b7";
 		public static final String MAT_CLINICAL_ENCOUNTER = "c3518485-ee22-4a47-b6d4-6d0e8f297b02";
+		public static final String MAXILLOFACIAL = "92999f52-f352-415a-9e0d-87872e5b2c8d";
 	}
 
 	public static final class _Form {
@@ -87,6 +88,7 @@ public class CommonMetadata extends AbstractMetadataBundle {
 		public static final String ONCOLOGY_SCREENING_FORM = "be5c5602-0a1d-11eb-9e20-37d2e56925ee";
 		public static final String HIV_SELF_TESTING = "810fc592-f5f8-467a-846e-e177ba48a4e5";
 		public static final String VMMC_PROCEDURE_FORM = "5ee93f48-960b-11ec-b909-0242ac120002";
+		public static final String MAXILLOFACIAL_CLINICAL_FORM = "b40d369c-31d0-4c1d-a80a-7e4b7f73bea0";
 	}
 
 	public static final class _OrderType {
@@ -186,6 +188,7 @@ public class CommonMetadata extends AbstractMetadataBundle {
 		install(encounterType("HIV self testing", "Self testing screening", _EncounterType.HIV_SELF_TEST));
 		install(encounterType("Oncology screening", "Oncology screening encounter type", _EncounterType.ONCOLOGY_SCREENING));
 		install(encounterType("MAT Clinical Encounter", "MAT Clinical Encounter", _EncounterType.MAT_CLINICAL_ENCOUNTER));
+		install(encounterType("Maxillofacial Clinical Encounter", "Maxillofacial Clinical Encounter", _EncounterType.MAXILLOFACIAL));
 
 		install(form("Clinical Encounter", null, _EncounterType.CONSULTATION, "1", _Form.CLINICAL_ENCOUNTER));
 		install(form("Lab Results", null, _EncounterType.LAB_RESULTS, "1", _Form.LAB_RESULTS));
@@ -207,6 +210,7 @@ public class CommonMetadata extends AbstractMetadataBundle {
 		install(form("Cervical Cancer Assessment Form", "Form for Cervical Cancer Assessment", _EncounterType.CACX_SCREENING, "1", _Form.CACX_ASSESSMENT_FORM));
 		install(form("Cancer Screening and early diagnosis", "Form Cancer Screening and early diagnosis", _EncounterType.ONCOLOGY_SCREENING, "1", _Form.ONCOLOGY_SCREENING_FORM));
 		install(form("HIV Self Test Form", "Form for HIV self testing services ", _EncounterType.HIV_SELF_TEST, "1", _Form.HIV_SELF_TESTING));
+		install(form("Maxillofacial Clinical Form", "Form for Maxillofacial clinical services ", _EncounterType.MAXILLOFACIAL, "1", _Form.MAXILLOFACIAL_CLINICAL_FORM));
 
 		install(globalProperty(EmrConstants.GP_DEFAULT_LOCATION, "The facility for which this installation is configured",
 				LocationDatatype.class, null, null));
